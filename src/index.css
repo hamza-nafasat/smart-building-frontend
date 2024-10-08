@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+.dashboard::before {
+    content: '';
+    background: url('./assets/images/default/header-bg.png') no-repeat center/cover;
+    width:100%;
+    height: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} 
+
+.custom-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #007AFF;
+    border-radius: 12px;
+}
+.custom-scroll::-webkit-scrollbar-track  {
+    background: #007AFF33;
+    border-radius: 12px;
+}
