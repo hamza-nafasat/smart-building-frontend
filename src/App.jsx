@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 import Loader from "./globalComponents/shared/Loader";
 const MainDashboard = lazy(() => import("./globalComponents/layout"));
 const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
-const General = lazy(() => import("./pages/general/General"));
+const Buildings = lazy(() => import("./pages/buildings/Buildings"));
 const Reports = lazy(() => import("./pages/reports/Reports"));
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainDashboard />}>
             <Route index element={<Dashboard />} />
-            <Route path="general" element={<General />} />
+            <Route path="buildings" element={<Buildings />} />
             <Route path="reports" element={<Reports />} />
           </Route>
         </Routes>
