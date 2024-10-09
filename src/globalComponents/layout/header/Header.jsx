@@ -15,14 +15,26 @@ const Header = () => {
     setIsNotificationOpen(!isNotificationOpen);
   const profileOpenHandler = () => setIsProfileOpen(!isProfileOpen);
 
-//   console.log('notificationRef', notificationRef)
-//   console.log('profileRef', profileRef)
+  console.log('notificationRef', notificationRef)
+  console.log('profileRef', profileRef)
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if(!notificationRef) {
+        setIsNotificationOpen(false)
+      }
+      document.addEventListener('click', handleClickOutside);
+      return () => {
+        document.removeEventListener('click', handleClickOutside)
+      }
+    }
+  }, [notificationRef, profileRef])
 
   return (
-    <header className="h-[260px]">
+    <header className="h-[205px]">
       <div className="flex items-center justify-end gap-4 xl:gap-6">
         <div className="relative">
-          <div className="cursor-pointer" onClick={notificationOpenHandler} ref={notificationRef}>
+          <div className="cursor-pointer" onClick={notificationOpenHandler}>
             <RingIcon />
             <p className="absolute top-1 left-[-4px] text-[8px] font-light text-white bg-[#FD4B2E] w-3 h-3 rounded-full grid place-items-center">
               9

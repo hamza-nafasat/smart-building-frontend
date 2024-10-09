@@ -4,6 +4,7 @@ import Loader from "./globalComponents/shared/Loader";
 const MainDashboard = lazy(() => import("./globalComponents/layout"));
 const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
 const General = lazy(() => import("./pages/general/General"));
+const Reports = lazy(() => import("./pages/reports/Reports"));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<MainDashboard />}>
             <Route index element={<Dashboard />} />
             <Route path="general" element={<General />} />
+            <Route path="reports" element={<Reports />} />
           </Route>
         </Routes>
       </Suspense>
