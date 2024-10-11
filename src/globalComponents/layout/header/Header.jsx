@@ -147,7 +147,7 @@ const NotificationItem = ({ icon, title, value, time }) => {
 const Profile = () => {
   return (
     <div className="w-full">
-      <Link className="flex items-center justify-between gap-4 px-2 py-2 border-b bg-white rounded-t-md hover:bg-[#a6d1ff]">
+      <Link to={"/account"} className="flex items-center justify-between gap-4 px-2 py-2 border-b bg-white rounded-t-md hover:bg-[#a6d1ff]">
         <h6 className="text-[13px] font-medium">My Profile</h6>
         <IoChevronForwardOutline fontSize={18} />
       </Link>
