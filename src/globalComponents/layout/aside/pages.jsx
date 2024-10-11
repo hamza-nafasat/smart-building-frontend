@@ -9,12 +9,31 @@ export const pages = [
     {
         title: 'Buildings',
         icon: <BuildingIcon />,
-        link: 'buildings'
+        link: '/buildings'
     },
     {
-        title: 'Map',
+        title: 'Maps',
         icon: <MapIcon />,
-        link: 'map'
+        subPages: [
+            {
+                title: 'Realtime Map',
+                link: '/realtime-map'
+            },
+            {
+                title: 'Realtime Heat Map',
+                link: '/realtime-heatmap'
+            }
+        ]
+    },
+    {
+        title: 'Users',
+        icon: <MapIcon />,
+        subPages: [
+            {
+                title: 'Inspectionists',
+                link: '/inspectionists'
+            },
+        ]
     },
     {
         title: 'Reports',
@@ -22,7 +41,7 @@ export const pages = [
         subPages: [
             {
                 title: 'Building Reports',
-                link: 'building-reports'
+                link: '/building-reports'
             },
         ]
     },
@@ -31,12 +50,12 @@ export const pages = [
         icon: <SettingIcon />,
         subPages: [
             {
-                title: 'Update Profile',
-                link: 'update-profile'
+                title: 'Account',
+                link: '/account'
             },
             {
                 title: 'Configuration',
-                link: 'configuration'
+                link: '/configuration'
             },
         ]
     }
