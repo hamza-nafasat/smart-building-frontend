@@ -4,12 +4,18 @@ import Loader from "./globalComponents/shared/Loader";
 const MainDashboard = lazy(() => import("./globalComponents/layout"));
 const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
 const Buildings = lazy(() => import("./pages/buildings/Buildings"));
-const RealtimeHeatmap = lazy(() => import("./pages/map/realtimeHeatmap/RealtimeHeatmap"));
+const RealtimeHeatmap = lazy(() =>
+  import("./pages/map/realtimeHeatmap/RealtimeHeatmap")
+);
 const RealtimeMap = lazy(() => import("./pages/map/realtimeMap/RealtimeMap"));
-const Inspectionists = lazy(() => import("./pages/users/inspectionists/Inspectionists"));
+const Inspectionists = lazy(() =>
+  import("./pages/users/inspectionists/Inspectionists")
+);
 const Account = lazy(() => import("./pages/settings/account/Account"));
-const Configuration = lazy(() => import("./pages/settings/configuration/Configuration"));
-const Reports = lazy(() => import("./pages/reports/Reports"));
+const Configuration = lazy(() =>
+  import("./pages/settings/configuration/Configuration")
+);
+const Reports = lazy(() => import("./pages/reports/buildingReports/Reports"));
 
 function App() {
   return (
@@ -25,7 +31,7 @@ function App() {
             <Route path="inspectionists" element={<Inspectionists />} />
             <Route path="account" element={<Account />} />
             <Route path="configuration" element={<Configuration />} />
-            <Route path="reports" element={<Reports />} />
+            <Route path="building-reports" element={<Reports />} />
           </Route>
         </Routes>
       </Suspense>

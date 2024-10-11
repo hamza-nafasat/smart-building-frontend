@@ -1,0 +1,54 @@
+{
+  "inspectionTable": [
+    {
+      "sensorType": "Temperature",
+      "currentValue": "35°C",
+      "maxValue": "45°C",
+      "minValue": "25°C",
+      "avgValue": "33°C",
+      "performance": "75%",
+      "statusAlert": "Normal",
+      "lastChecked": "2024-10-10 10:00"
+    },
+    {
+      "sensorType": "Humidity",
+      "currentValue": "60%",
+      "maxValue": "80%",
+      "minValue": "40%",
+      "avgValue": "65%",
+      "performance": "80%",
+      "statusAlert": "Warning",
+      "lastChecked": "2024-10-10 09:30"
+    },
+    {
+      "sensorType": "Pressure",
+      "currentValue": "1012 hPa",
+      "maxValue": "1050 hPa",
+      "minValue": "980 hPa",
+      "avgValue": "1000 hPa",
+      "performance": "85%",
+      "statusAlert": "Normal",
+      "lastChecked": "2024-10-10 09:45"
+    },
+    {
+      "sensorType": "CO2 Level",
+      "currentValue": "400 ppm",
+      "maxValue": "600 ppm",
+      "minValue": "300 ppm",
+      "avgValue": "450 ppm",
+      "performance": "90%",
+      "statusAlert": "Critical",
+      "lastChecked": "2024-10-10 08:50"
+    },
+    {
+      "sensorType": "Air Quality",
+      "currentValue": "Good",
+      "maxValue": "Excellent",
+      "minValue": "Poor",
+      "avgValue": "Moderate",
+      "performance": "65%",
+      "statusAlert": "Normal",
+      "lastChecked": "2024-10-10 10:10"
+    }
+  ]
+}
