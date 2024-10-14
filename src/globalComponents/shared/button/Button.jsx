@@ -4,8 +4,8 @@ const Button = ({
   text,
   textColor = "#fff",
   bg = "#007AFF",
-  hoverBg = "#007AFF95",
-  hoverTextColor = "#fff",
+  hoverBg,
+  hoverTextColor,
   firstIcon = false,
   lastIcon = false,
   borderColor = "transparent",
@@ -15,7 +15,7 @@ const Button = ({
   const [isHovered, setIsHovered] = useState(false);
   return (
     <button
-      className={`rounded-[8px] px-[21px] py-[6px] flex gap-1 items-center justify-center ${
+      className={`rounded-[8px] px-[21px] py-[6px] flex gap-1 items-center justify-center capitalize ${
         width ? width : "w-fit"
       }`}
       style={{

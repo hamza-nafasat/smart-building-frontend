@@ -6,16 +6,16 @@ import { Calender } from "../../assets/svgs";
 
 const CustomInput = React.forwardRef(({ value, onClick }, ref) => (
   <div
-    className="custom-input-wrapper"
+    className="custom-input-wrapper shadow-sm w-[250px]"
     onClick={onClick}
     ref={ref}
     style={{
       display: "flex",
       alignItems: "center",
-      border: "1px solid #ccc",
-      borderRadius: "5px",
-      padding: "5px 10px",
-      width: "250px",
+      border: "1px solid #54545499",
+      borderRadius: "6px",
+      padding: "12px 20px",
+      color: "#54545499",
       cursor: "pointer",
     }}
   >

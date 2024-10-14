@@ -19,6 +19,7 @@ import StatusGraph from "./components/StatusGraph";
 import Input from "../../../globalComponents/shared/Input";
 import Button from "../../../globalComponents/shared/button/Button";
 import { FiChevronDown } from "react-icons/fi";
+import AllTextFields from "./components/generateReport/AllTextFields";
 
 const statusCardIcon = [
   { heading: "Electricity", icon: <Thunder /> },
@@ -133,6 +134,7 @@ const Report = () => {
             ]}
           />
           <CustomDatePicker selectionType="range" />
+          <Button text="Export" />
         </div>
       </div>
       <div className="my-2">
@@ -181,16 +183,22 @@ const Report = () => {
 const GeneratedReport = () => {
   return (
     <div className="mt-3 shadow-lg bg-white rounded-md ">
-      <div className="p-4 border-b-[3px]">
+      <div className="p-4 border-b-[3px] flex justify-between">
         <div className="flex gap-4 items-center">
           <ReportPageIcon />
 
           <h3 className="text-sm sm:text-base font-[600]">Generate Report</h3>
         </div>
+        <Button text="export" lastIcon={<FiChevronDown />} />
       </div>
       <div className="p-4">
-        <Input type="text" placeholder="Choose File" />
-        <Button text="submit" />
+        <h3 className="text-lg sm:text-xl font-[600] text-center text-[#414141] mb-4">
+          Generate Custom Report
+        </h3>
+
+        <div>
+          <AllTextFields />
+        </div>
       </div>
     </div>
   );

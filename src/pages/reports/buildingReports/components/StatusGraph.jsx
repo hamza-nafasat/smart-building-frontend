@@ -155,8 +155,8 @@ const StatusGraph = () => {
           <button
             className={`px-4 py-2 rounded-lg transition-colors ${
               activeTab === 0
-                ? "bg-blue-500 text-white"
-                : "bg-blue-100 text-blue-500"
+                ? "bg-blue-500 text-white border-[2px] border-black"
+                : "bg-blue-400 text-white"
             }`}
             onClick={() => setActiveTab(0)}
           >
@@ -165,8 +165,8 @@ const StatusGraph = () => {
           <button
             className={`px-4 py-2 rounded-lg transition-colors ${
               activeTab === 1
-                ? "bg-blue-500 text-white"
-                : "bg-blue-100 text-blue-500"
+                ? "bg-blue-500 text-white border-[2px] border-black"
+                : " bg-blue-400 text-white"
             }`}
             onClick={() => setActiveTab(1)}
           >
