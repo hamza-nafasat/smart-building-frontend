@@ -16,6 +16,7 @@ const Configuration = lazy(() =>
   import("./pages/settings/configuration/Configuration")
 );
 const Reports = lazy(() => import("./pages/reports/buildingReports/Reports"));
+const BuildingStepper = lazy(() => import("./pages/buildings/components/BuildingStepper"));
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<MainDashboard />}>
             <Route index element={<Dashboard />} />
             <Route path="buildings" element={<Buildings />} />
+            <Route path="add-building" element={<BuildingStepper />} />
             <Route path="reports" element={<Reports />} />
             <Route path="realtime-heatmap" element={<RealtimeHeatmap />} />
             <Route path="realtime-map" element={<RealtimeMap />} />

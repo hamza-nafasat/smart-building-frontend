@@ -20,6 +20,7 @@ import Thunder from "./report/Thunder";
 import Warning from "./report/Warning";
 import ReportPageIcon from "./report/ReportIcon";
 import ChevronDownSimple from "./default/ChevronDownSimple";
+import BuildingArrowIcon from "./buildings/BuildingArrowIcon";
 
 export {
   Logo,
@@ -44,4 +45,5 @@ export {
   Warning,
   ReportPageIcon,
   ChevronDownSimple,
+  BuildingArrowIcon
 };
