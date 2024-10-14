@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronDownStylish } from "../../assets/svgs";
+import { ChevronDownSimple, ChevronDownStylish } from "../../assets/svgs";
 
 const Dropdown = ({
   options,
   defaultText = "Select",
   onSelect,
   initialValue,
-  width, // width is expected as a prop from parent
+  width,
+  simpleArrow = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(null);
@@ -50,7 +51,7 @@ const Dropdown = ({
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         >
-          <ChevronDownStylish />
+          {simpleArrow ? <ChevronDownSimple /> : <ChevronDownStylish />}
         </div>
       </button>
       {isOpen && (

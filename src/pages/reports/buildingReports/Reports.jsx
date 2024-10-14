@@ -7,9 +7,18 @@ import UsageCard from "./components/UsageCard";
 import Alerts from "./components/Alerts";
 import SensorTable from "./components/SensorTable";
 import InspectionTable from "./components/InspectionTable";
-import { Fire, FireDetector, Thermometer, Thunder } from "../../../assets/svgs";
+import {
+  Fire,
+  FireDetector,
+  ReportPageIcon,
+  Thermometer,
+  Thunder,
+} from "../../../assets/svgs";
 import Drop from "../../../assets/svgs/report/Drop";
 import StatusGraph from "./components/StatusGraph";
+import Input from "../../../globalComponents/shared/Input";
+import Button from "../../../globalComponents/shared/button/Button";
+import { FiChevronDown } from "react-icons/fi";
 
 const statusCardIcon = [
   { heading: "Electricity", icon: <Thunder /> },
@@ -24,14 +33,28 @@ const usageCardIcon = [
     icon: <Thunder />,
     percentage: 34,
     color: "#007AFF",
+    stroke: "#a0d4fa",
   },
-  { heading: "Gas", icon: <Fire />, percentage: 56, color: "#FF8932" },
-  { heading: "Water", icon: <Drop />, percentage: 70, color: "#49DA8F" },
+  {
+    heading: "Gas",
+    icon: <Fire />,
+    percentage: 56,
+    color: "#FF8932",
+    stroke: "#fac7a0",
+  },
+  {
+    heading: "Water",
+    icon: <Drop />,
+    percentage: 70,
+    color: "#49DA8F",
+    stroke: "#b3ffd7",
+  },
   {
     heading: "Temperature",
     icon: <Thermometer />,
     percentage: 90,
     color: "#F02D2D",
+    stroke: "#ffbaba ",
   },
 ];
 
@@ -82,14 +105,15 @@ export default Reports;
 
 const Report = () => {
   return (
-    <div className="mt-3 shadow-lg bg-white rounded-lg p-3">
-      <div className="flex items-center justify-between pb-1 border-b-[1px]">
+    <div className="mt-3 shadow-lg bg-white rounded-md p-3">
+      <div className="flex items-center justify-between pb-4 border-b-[1px]">
         <p className="font-[600] text-sm sm:text-base text-[#414141] ">
           Report
         </p>
         <div className="flex gap-2 items-center">
           <Dropdown
             width="130px"
+            simpleArrow={false}
             options={[
               { option: "All Buildings", value: "All-Buildings" },
               { option: "Building 1", value: "Building-1" },
@@ -99,6 +123,7 @@ const Report = () => {
           />
           <Dropdown
             width="140px"
+            simpleArrow={false}
             options={[
               { option: "All Sensor", value: "All-Sensor" },
               { option: "Water", value: "Water" },
@@ -136,6 +161,7 @@ const Report = () => {
                 heading={status.heading}
                 percentage={status.percentage}
                 color={status.color}
+                stroke={status.stroke}
               />
             </div>
           ))}
@@ -154,36 +180,18 @@ const Report = () => {
 
 const GeneratedReport = () => {
   return (
-    <div className="mt-3 shadow-lg bg-white rounded-lg">
-      <div>GeneratedReport</div>
+    <div className="mt-3 shadow-lg bg-white rounded-md ">
+      <div className="p-4 border-b-[3px]">
+        <div className="flex gap-4 items-center">
+          <ReportPageIcon />
+
+          <h3 className="text-sm sm:text-base font-[600]">Generate Report</h3>
+        </div>
+      </div>
+      <div className="p-4">
+        <Input type="text" placeholder="Choose File" />
+        <Button text="submit" firstIcon={<FiChevronDown />} />
+      </div>
     </div>
   );
 };
-
-{
-  /* <Dropdown
-        options={[
-          { option: "hello", value: "hello" },
-          { option: "you", value: "you" },
-        ]}
-      />
-      <CustomDatePicker selectionType="single" />
-      <CustomDatePicker selectionType="range" /> */
-}
-
-{
-  /* <StatusCard /> */
-}
-{
-  /* <UsageCard /> */
-}
-
-{
-  /* <Alerts /> */
-}
-{
-  /* <SensorTable /> */
-}
-{
-  /* <InspectionTable /> */
-}

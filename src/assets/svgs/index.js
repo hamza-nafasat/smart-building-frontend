@@ -18,6 +18,8 @@ import LineChartIcon from "./report/LineChartIcon";
 import Thermometer from "./report/Thermometer";
 import Thunder from "./report/Thunder";
 import Warning from "./report/Warning";
+import ReportPageIcon from "./report/ReportIcon";
+import ChevronDownSimple from "./default/ChevronDownSimple";
 
 export {
   Logo,
@@ -40,4 +42,6 @@ export {
   Thermometer,
   Thunder,
   Warning,
+  ReportPageIcon,
+  ChevronDownSimple,
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Progress = ({ percentage, color }) => {
+const Progress = ({ percentage, color, stroke }) => {
   const circleRadius = 45;
   const circleCircumference = 2 * Math.PI * circleRadius;
 
@@ -30,7 +30,7 @@ const Progress = ({ percentage, color }) => {
           cx="50"
           cy="50"
           r={circleRadius}
-          stroke="#ffffff"
+          stroke={stroke}
           strokeWidth="10"
           fill="transparent"
           strokeDasharray={circleCircumference}

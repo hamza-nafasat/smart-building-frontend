@@ -164,7 +164,7 @@ const InspectionTable = () => {
           value={search}
           onChange={handleSearch}
           placeholder="Search"
-          className="p-2 border border-gray-300 rounded-md w-1/3"
+          className="p-2 border border-gray-300 rounded-md w-1/3 focus:outline-none"
         />
       </div>
       <DataTable

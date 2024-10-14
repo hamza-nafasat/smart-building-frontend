@@ -4,7 +4,7 @@ import Danger from "../../../../assets/svgs/report/Danger";
 
 const Alerts = () => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-4 h-[500px] overflow-y-auto border-[1px]">
+    <div className="bg-white shadow-lg rounded-lg p-4 h-[500px] overflow-y-auto custom-scroll border-[1px]">
       <h3 className=" text-sm sm:text-base font-[600] text-[#383838] border-b-[2px] ">
         {" "}
         Alerts

@@ -1,12 +1,12 @@
 import React from "react";
 import Progress from "./Progress";
 
-const UsageCard = ({ heading, icon, percentage, color }) => {
+const UsageCard = ({ heading, icon, percentage, color, stroke }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-4 border-[1px]">
       <div className="flex gap-3 items-start">
         <div>
-          <Progress percentage={percentage} color={color} />
+          <Progress percentage={percentage} color={color} stroke={stroke} />
         </div>
         <div>
           <div className="flex justify-between">
