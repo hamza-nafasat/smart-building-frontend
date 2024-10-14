@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Button = ({ text, firstIcon = false, lastIcon = false, ...rest }) => {
+const Button = ({
+  text,
+  textColor = "#fff",
+  bg = "#007AFF",
+  hoverBg = "#007AFF95",
+  hoverTextColor = "#fff",
+  firstIcon = false,
+  lastIcon = false,
+  borderColor = "transparent",
+  width,
+  ...rest
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <button
-      className={`rounded-[8px] px-[21px] py-[6px] flex gap-3`}
-      style={{ background: "#007AFF", color: "white" }}
+      className={`rounded-[8px] px-[21px] py-[6px] flex gap-1 items-center justify-center ${
+        width ? width : "w-fit"
+      }`}
+      style={{
+        backgroundColor: isHovered ? hoverBg : bg,
+        color: isHovered ? hoverTextColor : textColor,
+        transition: "background-color 0.3s ease, color 0.3s ease",
+        border: `1px solid ${borderColor}`,
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       {...rest}
     >
-      {firstIcon && { firstIcon }}
+      {firstIcon && <span>{firstIcon}</span>}
       {text}
-      {lastIcon && { lastIcon }}
+      {lastIcon && <span>{lastIcon}</span>}
     </button>
   );
 };

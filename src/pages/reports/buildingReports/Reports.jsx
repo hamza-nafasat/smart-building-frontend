@@ -190,7 +190,7 @@ const GeneratedReport = () => {
       </div>
       <div className="p-4">
         <Input type="text" placeholder="Choose File" />
-        <Button text="submit" firstIcon={<FiChevronDown />} />
+        <Button text="submit" />
       </div>
     </div>
   );
