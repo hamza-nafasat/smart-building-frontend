@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 const Main = () => {
   return (
-    <main className='h-full overflow-y-scroll custom-scroll bg-white rounded-[14px] p-4'>
+    <main className='h-[calc(100vh-170px)] overflow-y-scroll custom-scroll bg-white rounded-[14px] p-4'>
         <Outlet />
     </main>
   )

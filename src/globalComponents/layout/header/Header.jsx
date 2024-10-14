@@ -43,7 +43,7 @@ const Header = () => {
   }, [notificationRef, profileRef]);
 
   return (
-    <header className="h-[205px]">
+    <header className="h-[150px]">
       <div className="flex items-center justify-end gap-4 xl:gap-6">
         <div className="relative">
           <div

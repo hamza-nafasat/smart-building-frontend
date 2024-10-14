@@ -34,7 +34,7 @@ const Aside = () => {
       className={`${
         aside
           ? "relative"
-          : "fixed 2xl:relative bg-[#00000099] 2xl:bg-transparent inset-0 2xl:inset-[unset] w-screen 2xl:w-auto h-screen 2xl:h-auto z-[999] p-4 2xl:p-0"
+          : "mr-4 fixed 2xl:relative bg-[#00000099] 2xl:bg-transparent inset-0 2xl:inset-[unset] w-screen 2xl:w-auto h-screen 2xl:h-auto z-[999] p-4 2xl:p-0"
       }`}
       onClick={asideToggleHandler}
     >
@@ -149,7 +149,7 @@ const DropdownLink = ({ page, handleSubpages, subpagesIsActive }) => {
           {page.title}
         </div>
       </div>
-      <div className="transition-all">
+      <div className={`transition-all duration-300 ${subpagesIsActive === page.title ? 'rotate-180':'rotate-0'}`}>
         <ChevronIcon />
       </div>
     </div>

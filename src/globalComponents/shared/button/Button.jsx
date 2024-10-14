@@ -15,7 +15,11 @@ const Button = ({
   const [isHovered, setIsHovered] = useState(false);
   return (
     <button
+<<<<<<< Updated upstream
       className={`rounded-[8px] px-[21px] py-[6px] flex gap-1 items-center justify-center capitalize ${
+=======
+      className={`rounded-md px-[21px] py-[10px] flex gap-1 items-center justify-center ${
+>>>>>>> Stashed changes
         width ? width : "w-fit"
       }`}
       style={{

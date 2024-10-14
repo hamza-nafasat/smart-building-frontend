@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../../globalComponents/shared/button/Button";
 
 const AdditionalInfo = ({ setCurrentStep }) => {
   return (
@@ -7,10 +8,17 @@ const AdditionalInfo = ({ setCurrentStep }) => {
         Additional Info
       </h4>
 
-      <button onClick={() => setCurrentStep((prevStep) => prevStep - 1)}>
-        Back
-      </button>
-      <button>Add Building</button>
+      <div className="flex flex-wrap items-center justify-end gap-4">
+        <Button
+          onClick={() => setCurrentStep((prevStep) => prevStep - 1)}
+          bg="#fff"
+          textColor="#007aff"
+          borderColor="#007aff"
+          text="Back"
+          width="w-[153px]"
+        />
+        <Button text="Add Building" width="w-[153px]" />
+      </div>
     </div>
   );
 };

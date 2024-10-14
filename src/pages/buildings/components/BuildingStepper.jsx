@@ -39,7 +39,7 @@ const BuildingStepper = () => {
       <h2 className="text-[#414141] text-xl md:text-2xl lg:text-[30px] font-semibold">
         Add Building
       </h2>
-      <div className="mt-4 md:mt-6 flex items-center justify-center gap-4  :gap-6 2xl:gap-8">
+      <div className="mt-4 md:mt-6 flex flex-wrap items-center md:justify-center gap-4  :gap-6 2xl:gap-8">
         {steps.map((step, i) => (
             <Step step={step} index={i} key={i} currentStep={currentStep} setCurrentStep={setCurrentStep} />
         ))}
