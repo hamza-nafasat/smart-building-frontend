@@ -21,6 +21,11 @@ import Warning from "./report/Warning";
 import ReportPageIcon from "./report/ReportIcon";
 import ChevronDownSimple from "./default/ChevronDownSimple";
 import BuildingArrowIcon from "./buildings/BuildingArrowIcon";
+import Csv from "./report/Csv.png";
+import Pdf from "./report/Pdf.png";
+import Excel from "./report/Excel.png";
+import Sample from "./report/sample.png";
+import Preview from "./report/preview.png";
 
 export {
   Logo,
@@ -45,5 +50,10 @@ export {
   Warning,
   ReportPageIcon,
   ChevronDownSimple,
-  BuildingArrowIcon
+  BuildingArrowIcon,
+  Csv,
+  Pdf,
+  Excel,
+  Sample,
+  Preview,
 };

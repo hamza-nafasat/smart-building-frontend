@@ -47,7 +47,7 @@ const Dropdown = ({
         onClick={() => setIsOpen(!isOpen)}
         style={{ width: width || "100%" }}
       >
-        <span className="text-sm text-[#54545499] font-[500]">
+        <span className="text-sm text-[#414141] font-[500]">
           {selected ? selected.option : defaultText}
         </span>
         <div

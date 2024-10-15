@@ -6,7 +6,7 @@ import { Calender } from "../../assets/svgs";
 
 const CustomInput = React.forwardRef(({ value, onClick }, ref) => (
   <div
-    className="custom-input-wrapper shadow-sm w-[250px]"
+    className="custom-input-wrapper shadow-sm w-full"
     onClick={onClick}
     ref={ref}
     style={{
@@ -17,6 +17,7 @@ const CustomInput = React.forwardRef(({ value, onClick }, ref) => (
       padding: "12px 20px",
       color: "#54545499",
       cursor: "pointer",
+      width: "100%",
     }}
   >
     <Calender />
@@ -30,6 +31,7 @@ const CustomInput = React.forwardRef(({ value, onClick }, ref) => (
         outline: "none",
         fontSize: "16px",
         width: "100%",
+        flexGrow: 1,
       }}
     />
   </div>
@@ -56,18 +58,22 @@ const CustomDatePicker = ({ selectionType = "single" }) => {
   };
 
   return (
-    <DatePicker
-      selected={startDate}
-      startDate={startDate}
-      endDate={endDate}
-      onChange={handleChange}
-      selectsRange={selectionType === "range"}
-      customInput={<CustomInput />}
-      dateFormat="MM/dd/yy"
-      placeholderText={
-        selectionType === "range" ? "Select a date range" : "Select a date"
-      }
-    />
+    <div style={{ width: "100%" }}>
+      <DatePicker
+        selected={startDate}
+        startDate={startDate}
+        endDate={endDate}
+        onChange={handleChange}
+        selectsRange={selectionType === "range"}
+        customInput={<CustomInput />}
+        dateFormat="MM/dd/yy"
+        placeholderText={
+          selectionType === "range" ? "Select a date range" : "Select a date"
+        }
+        wrapperClassName="w-full"
+        className="w-full"
+      />
+    </div>
   );
 };
 

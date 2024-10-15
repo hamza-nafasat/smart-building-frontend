@@ -10,6 +10,7 @@ import InspectionTable from "./components/InspectionTable";
 import {
   Fire,
   FireDetector,
+  Preview,
   ReportPageIcon,
   Thermometer,
   Thunder,
@@ -192,12 +193,23 @@ const GeneratedReport = () => {
         <Button text="export" lastIcon={<FiChevronDown />} />
       </div>
       <div className="p-4">
-        <h3 className="text-lg sm:text-xl font-[600] text-center text-[#414141] mb-4">
-          Generate Custom Report
-        </h3>
-
-        <div>
-          <AllTextFields />
+        <div className="grid grid-cols-12 gap-6">
+          <div className="col-span-12 xl:col-span-7">
+            <div>
+              <h3 className="text-lg sm:text-xl font-[600] text-center text-[#414141] mb-4">
+                Generate Custom Report
+              </h3>
+              <AllTextFields />
+            </div>
+          </div>
+          <div className="col-span-12 xl:col-span-5">
+            <div className="">
+              <h3 className="text-lg sm:text-xl font-[600] text-center text-[#414141] mb-4">
+                Report Preview
+              </h3>
+              <img src={Preview} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
