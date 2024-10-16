@@ -18,6 +18,7 @@ const SensorInfo = ({ setCurrentStep }) => {
           borderColor="#007aff"
           text="Back"
           width="w-[153px]"
+          bg="bg-transparent text-primary border-primary border-[1px] hover:bg-primary hover:text-white"
         />
         <Button onClick={buttonClickHandler} text="Next" width="w-[153px]" />
       </div>

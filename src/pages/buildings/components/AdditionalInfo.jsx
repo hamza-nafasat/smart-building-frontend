@@ -11,11 +11,9 @@ const AdditionalInfo = ({ setCurrentStep }) => {
       <div className="flex flex-wrap items-center justify-end gap-4">
         <Button
           onClick={() => setCurrentStep((prevStep) => prevStep - 1)}
-          bg="#fff"
-          textColor="#007aff"
-          borderColor="#007aff"
           text="Back"
           width="w-[153px]"
+          bg="bg-transparent text-primary border-primary border-[1px] hover:bg-primary hover:text-white"
         />
         <Button text="Add Building" width="w-[153px]" />
       </div>

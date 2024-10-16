@@ -39,7 +39,7 @@ const Dropdown = ({
       style={{ width: width || "100%" }}
     >
       {label && (
-        <label class="block text-[#11111199] text-sm mb-2">{label}</label>
+        <label className="block text-[#11111199] text-sm mb-2">{label}</label>
       )}
       <button
         type="button"
@@ -47,7 +47,11 @@ const Dropdown = ({
         onClick={() => setIsOpen(!isOpen)}
         style={{ width: width || "100%" }}
       >
-        <span className="text-sm text-[#414141] font-[500]">
+        <span
+          className={`text-sm font-[500] ${
+            selected ? "text-[#414141]" : "text-[#9CA3AF]"
+          }`}
+        >
           {selected ? selected.option : defaultText}
         </span>
         <div

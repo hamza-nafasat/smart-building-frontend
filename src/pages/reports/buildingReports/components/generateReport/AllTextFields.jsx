@@ -96,27 +96,16 @@ const AllTextFields = () => {
       <div className="flex flex-col md:flex-row justify-end mt-4 gap-4">
         <Button
           text="cancel"
-          bg="transparent"
-          textColor="#007AFF"
-          borderColor="#007AFF"
           width="sm:w-[130px] w-full"
+          bg="bg-transparent text-primary border-primary border-[1px] hover:bg-primary hover:text-white"
         />
         <Button
           text="preview"
-          bg="#007AFF"
-          textColor="white"
-          borderColor="white"
           onClick={handleOpenModal}
           width="sm:w-[130px] w-full"
         />
 
-        <Button
-          text="export"
-          bg="#007AFF"
-          textColor="white"
-          borderColor="white"
-          width="sm:w-[130px] w-full"
-        />
+        <Button text="export" width="sm:w-[130px] w-full" />
       </div>
       {openModal && (
         <Modal title="Export" onClose={() => setOpenModal(false)}>
@@ -172,25 +161,18 @@ const ModalBody = () => {
       <div className="flex justify-end mt-4 gap-4 flex-col md:flex-row">
         <Button
           text="Draft"
-          bg="transparent"
-          textColor="#007AFF"
-          borderColor="#007AFF"
           width="md:w-[120px] w-full"
+          bg="bg-transparent text-primary border-primary border-[1px] hover:bg-primary hover:text-white"
         />
         <Button
           text="Email"
-          bg="transparent"
-          textColor="#007AFF"
-          borderColor="#007AFF"
           width="md:w-[120px] w-full"
           onClick={handleShowFields}
+          bg="bg-transparent text-primary border-primary border-[1px] hover:bg-primary hover:text-white"
         />
 
         <Button
           text="Download"
-          bg="#007AFF"
-          textColor="white"
-          borderColor="white"
           width="md:w-[120px] w-full"
           onClick={() => setShowInput(false)}
         />
