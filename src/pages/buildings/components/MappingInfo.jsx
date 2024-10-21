@@ -38,7 +38,7 @@ const MappingInfo = ({ setCurrentStep }) => {
         />
       </div>
 
-      <div className="lg:col-span-12 mt-4">
+      <div className="lg:col-span-2 mt-4">
         <div className="h-[325px] rounded-lg shadow-md">
           <Map lat={lat} lng={lng} />
         </div>

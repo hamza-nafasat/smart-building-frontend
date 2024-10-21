@@ -23,11 +23,11 @@ const RoomsInfo = ({ setCurrentStep }) => {
         />
         <Input type="text" placeholder="Floor name/ID" />
         <Input type="text" placeholder="Total rooms" />
-      </div>
-
-      <div className="grid grid-cols-1 mt-4">
+      <div className="md:col-span-2 xl:col-span-3 mt-4">
         <TextArea placeholder="Description" />
       </div>
+      </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-4 gap-4">
         <Dropdown
