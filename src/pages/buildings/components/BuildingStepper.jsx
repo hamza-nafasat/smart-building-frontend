@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import GeneralInfo from "./GeneralInfo";
 import MappingInfo from "./MappingInfo";
 import RoomsInfo from "./RoomsInfo";
-import SensorInfo from "./SensorInfo";
-import AdditionalInfo from "./AdditionalInfo";
 import { BuildingArrowIcon } from "../../../assets/svgs";
+import UploadPhotos from "./UploadPhotos";
 
 const BuildingStepper = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -14,13 +13,11 @@ const BuildingStepper = () => {
       case 0:
         return <GeneralInfo setCurrentStep={setCurrentStep} />;
       case 1:
-        return <MappingInfo setCurrentStep={setCurrentStep} />;
+        return <UploadPhotos setCurrentStep={setCurrentStep} />;
       case 2:
-        return <RoomsInfo setCurrentStep={setCurrentStep} />;
+        return <MappingInfo setCurrentStep={setCurrentStep} />;
       case 3:
-        return <SensorInfo setCurrentStep={setCurrentStep} />;
-      case 4:
-        return <AdditionalInfo setCurrentStep={setCurrentStep} />;
+        return <RoomsInfo setCurrentStep={setCurrentStep} />;
       default:
         return null;
     }
@@ -28,10 +25,9 @@ const BuildingStepper = () => {
 
   const steps = [
     "General Info",
+    "Upload Photos",
     "Mapping Info",
     "Rooms Info",
-    "Sensor Info",
-    "Additional Info",
   ];
 
   return (

@@ -1,5 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import "cropperjs/dist/cropper.css";
 import Loader from "./globalComponents/shared/Loader";
 const MainDashboard = lazy(() => import("./globalComponents/layout"));
 const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));

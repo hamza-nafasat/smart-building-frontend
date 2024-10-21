@@ -26,6 +26,8 @@ import Pdf from "./report/Pdf.png";
 import Excel from "./report/Excel.png";
 import Sample from "./report/sample.png";
 import Preview from "./report/preview.png";
+import EditIcon from "./buildings/EditIcon";
+import DeleteIcon from "./buildings/DeleteIcon";
 
 export {
   Logo,
@@ -56,4 +58,6 @@ export {
   Excel,
   Sample,
   Preview,
+  EditIcon,
+  DeleteIcon,
 };
