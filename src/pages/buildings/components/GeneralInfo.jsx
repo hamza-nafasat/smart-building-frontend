@@ -58,13 +58,13 @@ const GeneralInfo = ({ setCurrentStep }) => {
             value={floorCount}
           />
         </div>
-        <div className="col-span-12 lg:col-span-4">
+        <div className="col-span-12 lg:col-span-6">
           <Dropdown
             options={[{ option: "public" }, { option: "private" }]}
             defaultText="Building type"
           />
         </div>
-        <div className="col-span-12 lg:col-span-4">
+        <div className="col-span-12 lg:col-span-6">
           <Input type="text" placeholder="Other details" />
         </div>
         <div className="col-span-12 flex justify-end">
