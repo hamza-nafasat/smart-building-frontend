@@ -41,7 +41,13 @@ const BuildingStepper = () => {
       </h2>
       <div className="mt-4 md:mt-6 flex flex-wrap items-center md:justify-center gap-4  :gap-6 2xl:gap-8">
         {steps.map((step, i) => (
-            <Step step={step} index={i} key={i} currentStep={currentStep} setCurrentStep={setCurrentStep} />
+          <Step
+            step={step}
+            index={i}
+            key={i}
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
         ))}
       </div>
       <div className="mt-4 md:mt-6 2xl:mt-8">
@@ -55,13 +61,18 @@ export default BuildingStepper;
 
 const Step = ({ step, index, currentStep, setCurrentStep }) => {
   return (
-    <div className={`flex items-center gap-1 ${currentStep >= index ? 'opacity-100 cursor-pointer':'opacity-50 grayscale pointer-events-none'}`} onClick={() => setCurrentStep(index)}>
+    <div
+      className={`flex items-center gap-1 ${
+        currentStep >= index
+          ? "opacity-100 cursor-pointer"
+          : "opacity-50 grayscale pointer-events-none"
+      }`}
+      onClick={() => setCurrentStep(index)}
+    >
       <span className="w-[32px] h-[32px] rounded-full border-2 border-[#007AFF] text-[#007AFF] text-xl font-semibold grid place-items-center">
         {index + 1}
       </span>
-      <p className="text-xs sm:text-sm text-[#007AFF] font-medium">
-        {step}
-      </p>
+      <p className="text-xs sm:text-sm text-[#007AFF] font-medium">{step}</p>
       <BuildingArrowIcon />
     </div>
   );

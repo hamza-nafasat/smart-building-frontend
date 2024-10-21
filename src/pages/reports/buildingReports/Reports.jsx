@@ -107,7 +107,7 @@ export default Reports;
 
 const Report = () => {
   return (
-    <div className="mt-3 shadow-lg bg-white rounded-md p-3">
+    <div className="mt-3 bg-white rounded-md p-3">
       <div className="flex items-center justify-between pb-4 border-b-[1px]">
         <p className="font-[600] text-sm sm:text-base text-[#414141] ">
           Report
