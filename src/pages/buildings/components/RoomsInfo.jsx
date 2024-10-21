@@ -15,43 +15,11 @@ const RoomsInfo = ({ setCurrentStep }) => {
       <h4 className="text-[#414141] text-lg md:text-xl font-medium text-center mb-4">
         Room Info
       </h4>
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-4 gap-4">
-        <Dropdown
-          options={[
-            { option: "Floor 1" },
-            { option: "Floor 2" },
-            { option: "Floor 3" },
-          ]}
-          defaultText="Floor number"
-        />
-        <Input type="text" placeholder="Floor name/ID" />
-        <Input type="text" placeholder="Total rooms" />
-      <div className="md:col-span-2 xl:col-span-3 mt-4">
-        <TextArea placeholder="Description" />
-      </div>
-      </div>
-
-
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-4 gap-4">
-        <Dropdown
-          options={[
-            { option: "type 1" },
-            { option: "type 2" },
-            { option: "type 3" },
-          ]}
-          defaultText="Floor type"
-        />
-        <Input type="number" placeholder="Floor area(sq ft/m)" />
-        <Input type="tel " placeholder="Contact details" />
-      </div>
-=======
       {floorCount.map((floor, i) => (
         <div key={i} className="my-4">
           <Accordion floorNumber={i + 1} />
         </div>
       ))}
->>>>>>> 63b448e98a4d7e8bbb31a7150f7f95025f89c5c5
 
       <div className="flex flex-wrap items-center justify-end gap-4 mt-4">
         <Button
