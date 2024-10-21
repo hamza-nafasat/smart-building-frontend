@@ -63,19 +63,19 @@ const UploadPhotos = ({ setCurrentStep }) => {
           images.map((file, index) => (
             <div key={index} className="relative basis-[24%]">
               <img
-                className="h-[240px] w-full object-cover rounded-md p-4 border"
+                className="h-[240px] w-full object-cover rounded-md border"
                 src={croppedImages[index] || file.preview}
                 alt={`Preview ${index}`}
               />
-              <div className="absolute top-2 right-2 flex space-x-1">
+              <div className="absolute top-2 right-2 flex space-x-1 bg-[#00000089] p-1 rounded-md">
                 <div
-                  className="cursor-pointer bg-primary p-1 rounded-lg"
+                  className="cursor-pointer"
                   onClick={() => modalOpenHandler(file, index)}
                 >
                   <EditIcon />
                 </div>
                 <div
-                  className="cursor-pointer bg-white p-1 rounded-lg"
+                  className="cursor-pointer"
                   onClick={() =>
                     setImages(images.filter((_, i) => i !== index))
                   }
@@ -103,7 +103,7 @@ const UploadPhotos = ({ setCurrentStep }) => {
         <Modal onClose={modalCloseHandler} title="Crop Image">
           <div className="w-full mt-4">
             <Cropper
-              src={currentImage.preview}
+              src={currentImage?.preview}
               style={{ height: 400, width: "100%" }}
               aspectRatio={16 / 9}
               guides={false}
