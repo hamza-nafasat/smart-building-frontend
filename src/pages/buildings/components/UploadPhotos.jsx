@@ -67,7 +67,7 @@ const UploadPhotos = ({ setCurrentStep }) => {
                 src={croppedImages[index] || file.preview}
                 alt={`Preview ${index}`}
               />
-              <div className="absolute top-2 right-2 flex space-x-1 bg-[#00000089] p-1 rounded-md">
+              <div className="absolute top-2 right-2 flex space-x-1 bg-[#00000045] p-1 rounded-md">
                 <div
                   className="cursor-pointer"
                   onClick={() => modalOpenHandler(file, index)}
@@ -106,7 +106,8 @@ const UploadPhotos = ({ setCurrentStep }) => {
               src={currentImage?.preview}
               style={{ height: 400, width: "100%" }}
               aspectRatio={16 / 9}
-              guides={false}
+              guides
+              responsive
               onInitialized={(instance) =>
                 setCurrentImage((prev) => ({ ...prev, cropper: instance }))
               }
