@@ -28,8 +28,57 @@ import Sample from "./report/sample.png";
 import Preview from "./report/preview.png";
 import EditIcon from "./buildings/EditIcon";
 import DeleteIcon from "./buildings/DeleteIcon";
+import WelcomeIcon from "./inspection/WelcomeIcon";
+
+import PurpleCalender from "./inspection/PurpleCalender";
+import LocationIcon from "./inspection/LocationIcon";
+import SearchIcon from "./default/SearchIcon";
+import TotalInspectionIcon from "./inspection/TotalInspectionIcon";
+import InprogressIcon from "./inspection/InprogressIcon";
+import PendingIcon from "./inspection/PendingIcon";
+import CompletedIcon from "./inspection/CompletedIcon";
+import InspectionOfficer from "./inspection/InspectionOfficer";
+import BuildingsIcon from "./inspection/BuildingsIcon";
+import DateofInspection from "./inspection/DateofInspection";
+import InspectionType from "./inspection/InspectionType";
+import ResultIcon from "./inspection/ResultIcon";
+import DetailsIcon from "./inspection/DetailsIcon";
+import CustomChevronDown from "./default/CustomChevronDown";
+import SensorsIcon from "./inspection/SensorsIcon";
+import FeedbackIcon from "./inspection/FeedbackIcon";
+import RatingIcon from "./inspection/RatingIcon";
+import IssuesIcon from "./inspection/IssuesIcon";
+import ElectricityIcon from "./inspection/ElectricityIcon";
+import LeakageIcon from "./inspection/LeakageIcon";
+import WaterIcon from "./inspection/WaterIcon";
+import GasIcon from "./inspection/GasIcon";
+import TemperatureIcon from "./inspection/TemperatureIcon";
+import OtherSensor from "./inspection/OtherSensor";
+import BlueHome from "./inspection/BlueHome";
+import TotalFloorsIcon from "./inspection/TotalFloorsIcon";
+import TotalAreaIcon from "./inspection/TotalAreaIcon";
+import TotalSensorIcon from "./inspection/TotalSensorIcon";
 
 export {
+  TotalSensorIcon,
+  TotalAreaIcon,
+  TotalFloorsIcon,
+  OtherSensor,
+  TemperatureIcon,
+  GasIcon,
+  WaterIcon,
+  LeakageIcon,
+  ElectricityIcon,
+  IssuesIcon,
+  RatingIcon,
+  SensorsIcon,
+  FeedbackIcon,
+  InspectionOfficer,
+  BuildingsIcon,
+  DateofInspection,
+  InspectionType,
+  ResultIcon,
+  DetailsIcon,
   Logo,
   Hambarger,
   RingIcon,
@@ -60,4 +109,14 @@ export {
   Preview,
   EditIcon,
   DeleteIcon,
+  WelcomeIcon,
+  PurpleCalender,
+  LocationIcon,
+  SearchIcon,
+  TotalInspectionIcon,
+  InprogressIcon,
+  PendingIcon,
+  CompletedIcon,
+  CustomChevronDown,
+  BlueHome,
 };

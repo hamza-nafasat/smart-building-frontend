@@ -9,7 +9,7 @@ const Modal = ({ title, onClose, children, width, headingIcon }) => {
     >
       <div
         className={`bg-white rounded-[12px] shadow-lg p-4 md:p-6 overflow-y-auto h-fit max-h-full no-scrollbar ${
-          width ? width : "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px]"
+          width ? width : "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[1000px]"
         }`}
         onClick={(e) => e.stopPropagation()}
       >

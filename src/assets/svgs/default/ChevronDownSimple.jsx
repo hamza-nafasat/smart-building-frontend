@@ -12,8 +12,8 @@ const ChevronDownSimple = () => {
       <path
         d="M1.5 1.5L5.5 5.5L9.5 1.5"
         stroke="#8D8C8D"
-        stroke-width="1.8"
-        stroke-linecap="round"
+        strokeWidth="1.8"
+        strokeLinecap="round"
       />
     </svg>
   );
