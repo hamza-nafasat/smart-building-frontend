@@ -39,7 +39,7 @@ const LineChart = () => {
         data={lineData}
         margin={{
           top: 10,
-          right: 0,
+          right: 20,
           left: 0,
           bottom: 0,
         }}
@@ -108,7 +108,7 @@ const CustomBarChart = () => {
         data={barData}
         margin={{
           top: 5,
-          right: 0,
+          right: 20,
           left: 0,
           bottom: 0,
         }}
@@ -146,12 +146,12 @@ const CustomBarChart = () => {
 const StatusGraph = () => {
   const [activeTab, setActiveTab] = useState(0);
   return (
-    <div className="p-5 rounded-lg shadow-lg border-[1px] h-full">
+    <div className=" rounded-lg shadow-lg border-[1px] h-full">
       <div className="flex items-center justify-between">
-        <h3 className="sm:text-base text-sm font-[600] text-[#383838]">
+        <h3 className="sm:text-base text-sm font-[600] text-[#383838] p-5">
           Status Graph
         </h3>
-        <div className="flex gap-3">
+        <div className="flex gap-3 p-5 ">
           <button
             className={`px-4 py-2 rounded-lg transition-colors ${
               activeTab === 0

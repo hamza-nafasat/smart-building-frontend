@@ -51,15 +51,15 @@ export const pages = [
       },
       {
         title: "Bill Reports",
-        link: "/building-reports",
+        link: "/",
       },
       {
         title: "Automation Reports",
-        link: "/building-reports",
+        link: "/",
       },
       {
         title: "Inspection",
-        link: "/building-reports",
+        link: "/",
       },
     ],
   },

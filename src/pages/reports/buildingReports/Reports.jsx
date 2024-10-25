@@ -65,7 +65,6 @@ const Reports = () => {
 
   return (
     <div
-      className="p-5"
       style={{
         background: "#FFFFFF",
         borderRadius: "14px",
@@ -107,12 +106,12 @@ export default Reports;
 
 const Report = () => {
   return (
-    <div className="mt-3 bg-white rounded-md p-3">
-      <div className="flex items-center justify-between pb-4 border-b-[1px]">
-        <p className="font-[600] text-sm sm:text-base text-[#414141] ">
+    <div className="mt-3 bg-white rounded-md">
+      <div className="flex flex-wrap md:flex-nowrap items-center justify-between pb-4 border-b-[1px]">
+        <p className="font-[600] mb-2 md:mb-0 text-sm sm:text-base text-[#414141] ">
           Report
         </p>
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-wrap md:flex-nowrap gap-2 items-center">
           <Dropdown
             width="130px"
             simpleArrow={false}
@@ -183,7 +182,7 @@ const Report = () => {
 
 const GeneratedReport = () => {
   return (
-    <div className="mt-3 shadow-lg bg-white rounded-md ">
+    <div className="mt-3 ">
       <div className="p-4 border-b-[3px] flex justify-between">
         <div className="flex gap-4 items-center">
           <ReportPageIcon />
@@ -192,7 +191,7 @@ const GeneratedReport = () => {
         </div>
         <Button text="export" lastIcon={<FiChevronDown />} />
       </div>
-      <div className="p-4">
+      <div className="py-4">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 xl:col-span-7">
             <div>

@@ -4,7 +4,7 @@ import Progress from "./Progress";
 const UsageCard = ({ heading, icon, percentage, color, stroke }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-4 border-[1px]">
-      <div className="flex gap-3 items-start">
+      <div className="flex flex-col md:flex-row gap-3 items-center md:items-start">
         <div>
           <Progress percentage={percentage} color={color} stroke={stroke} />
         </div>
