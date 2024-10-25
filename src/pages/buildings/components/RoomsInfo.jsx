@@ -28,7 +28,7 @@ const RoomsInfo = ({ setCurrentStep }) => {
           width="w-[153px]"
           bg="bg-transparent text-primary border-primary border-[1px] hover:bg-primary hover:text-white"
         />
-        <Button onClick={buttonClickHandler} text="Next" width="w-[153px]" />
+        <Button onClick={buttonClickHandler} text="Submit" width="w-[153px]" />
       </div>
     </div>
   );
