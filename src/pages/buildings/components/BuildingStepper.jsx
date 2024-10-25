@@ -23,12 +23,7 @@ const BuildingStepper = () => {
     }
   };
 
-  const steps = [
-    "General Info",
-    "Upload Photos",
-    "Mapping Info",
-    "Rooms Info",
-  ];
+  const steps = ["General Info", "Upload Photos", "Mapping Info", "Rooms Info"];
 
   return (
     <div className="px-0 md:px-2">
@@ -43,6 +38,7 @@ const BuildingStepper = () => {
             key={i}
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
+            stepsLength={steps.length}
           />
         ))}
       </div>
@@ -55,7 +51,7 @@ const BuildingStepper = () => {
 
 export default BuildingStepper;
 
-const Step = ({ step, index, currentStep, setCurrentStep }) => {
+const Step = ({ step, index, currentStep, setCurrentStep, stepsLength }) => {
   return (
     <div
       className={`flex items-center gap-1 ${
@@ -69,7 +65,7 @@ const Step = ({ step, index, currentStep, setCurrentStep }) => {
         {index + 1}
       </span>
       <p className="text-xs sm:text-sm text-[#007AFF] font-medium">{step}</p>
-      <BuildingArrowIcon />
+      {index < stepsLength - 1 && <BuildingArrowIcon />}
     </div>
   );
 };
