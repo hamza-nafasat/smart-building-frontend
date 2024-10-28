@@ -20,19 +20,19 @@ const Security = () => {
           label="New Password"
         />
       </div>
-      <div className="flex gap-4 mt-4 justify-end">
+      <div className="flex flex-col-reverse md:flex-row gap-1 md:gap-4 mt-4 justify-end">
         <Button
           text="Back"
           bgColor="#C7C7C7"
           textColor="#fff"
           border="#C7C7C7"
-          width="w-[175px]"
+          width=" w-full md:w-[175px]"
         />
         <Button
           text="Save"
           bgColor="rgba(0,122,255,1)"
           textColor="#fff"
-          width="w-[175px]"
+          width=" w-full md:w-[175px]"
         />
       </div>
     </div>
