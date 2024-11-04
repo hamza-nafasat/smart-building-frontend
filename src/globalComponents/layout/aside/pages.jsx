@@ -4,6 +4,7 @@ import {
   MapIcon,
   ReportIcon,
   SettingIcon,
+  InspectionIcon
 } from "../../../assets/svgs";
 
 export const pages = [
@@ -62,6 +63,11 @@ export const pages = [
         link: "/",
       },
     ],
+  },
+  {
+    title: "Inspection Officer",
+    icon: <InspectionIcon />,
+    link: "/inspection-officer",
   },
   {
     title: "Settings",

@@ -29,7 +29,6 @@ import Preview from "./report/preview.png";
 import EditIcon from "./buildings/EditIcon";
 import DeleteIcon from "./buildings/DeleteIcon";
 import WelcomeIcon from "./inspection/WelcomeIcon";
-
 import PurpleCalender from "./inspection/PurpleCalender";
 import LocationIcon from "./inspection/LocationIcon";
 import SearchIcon from "./default/SearchIcon";
@@ -58,6 +57,7 @@ import BlueHome from "./inspection/BlueHome";
 import TotalFloorsIcon from "./inspection/TotalFloorsIcon";
 import TotalAreaIcon from "./inspection/TotalAreaIcon";
 import TotalSensorIcon from "./inspection/TotalSensorIcon";
+import InspectionIcon from './aside/InspectionIcon'
 
 export {
   TotalSensorIcon,
@@ -119,4 +119,5 @@ export {
   CompletedIcon,
   CustomChevronDown,
   BlueHome,
+  InspectionIcon,
 };

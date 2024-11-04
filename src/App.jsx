@@ -32,6 +32,9 @@ const Reports = lazy(() => import("./pages/reports/buildingReports/Reports"));
 const BuildingStepper = lazy(() =>
   import("./pages/buildings/components/BuildingStepper")
 );
+const InspectionOfficer = lazy(() =>
+  import("./pages/inspectionOfficer/InspectionOfficer")
+);
 
 function App() {
   return (
@@ -49,6 +52,7 @@ function App() {
             <Route path="account" element={<Account />} />
             <Route path="configuration" element={<Configuration />} />
             <Route path="building-reports" element={<Reports />} />
+            <Route path="inspection-officer" element={<InspectionOfficer />} />
           </Route>
 
           {/* Inspection Routes */}
