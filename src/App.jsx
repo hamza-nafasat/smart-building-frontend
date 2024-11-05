@@ -14,6 +14,10 @@ import InspectionSetting from "./inspection/pages/setting/InspectionSetting";
 import InspectionDetail from "./inspection/pages/dashboard/inspectionDetail/InspectionDetail";
 import EditProfile from "./inspection/pages/setting/EditProfile";
 import Security from "./inspection/pages/setting/Security";
+import Login from "./pages/auth/login/Login";
+import SignUp from "./pages/auth/signup/Signup";
+import ForgetPassword from "./pages/auth/forgetPassword/ForgetPassword";
+import ChangePassword from "./pages/auth/forgetPassword/ChangePassword";
 const MainDashboard = lazy(() => import("./globalComponents/layout"));
 const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
 const Buildings = lazy(() => import("./pages/buildings/Buildings"));
@@ -41,6 +45,11 @@ function App() {
     <Router>
       <Suspense fallback={<Loader />}>
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
+          <Route path="/change-password" element={<ChangePassword />} />
+
           <Route path="/" element={<MainDashboard />}>
             <Route index element={<Dashboard />} />
             <Route path="buildings" element={<Buildings />} />
