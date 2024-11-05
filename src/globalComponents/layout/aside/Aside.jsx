@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../../assets/images/default/logo.png";
-import { ChevronIcon, Hambarger } from "../../../assets/svgs";
+import { ChevronIcon, HambargerIcon } from "../../../assets/svgs";
 import { pages } from "./pages";
 import { Link, useLocation } from "react-router-dom";
 
@@ -54,7 +54,7 @@ const Aside = () => {
             }`}
             onClick={asideToggleHandler}
           >
-            <Hambarger />
+            <HambargerIcon />
           </div>
         </div>
         <div className="my-5 w-full h-[2px] bg-[#FFFFFF33]"></div>
@@ -110,7 +110,7 @@ const Aside = () => {
             aside ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Hambarger />
+          <HambargerIcon />
         </div>
       </div>
     </div>
@@ -149,7 +149,11 @@ const DropdownLink = ({ page, handleSubpages, subpagesIsActive }) => {
           {page.title}
         </div>
       </div>
-      <div className={`transition-all duration-300 ${subpagesIsActive === page.title ? 'rotate-180':'rotate-0'}`}>
+      <div
+        className={`transition-all duration-300 ${
+          subpagesIsActive === page.title ? "rotate-180" : "rotate-0"
+        }`}
+      >
         <ChevronIcon />
       </div>
     </div>

@@ -4,25 +4,16 @@ import { FiPlus } from "react-icons/fi";
 import profile from "../../../assets/images/inspection/profile.png";
 import { IoEye } from "react-icons/io5";
 import { Link } from "react-router-dom";
-// import Building from "../../../asset/svgs/inspection/history/Building";
-// import Calender from "../../../asset/svgs/inspection/Calender";
-// import Warning from "../../../asset/svgs/inspection/history/Warning";
-// import SearchIcon from "../../../asset/svgs/inspection/SearchIcon";
-// import Modal from "../../components/shared/modals/Modal";
-// import InspectionPreview from "../dashboard/allFloors/inspectionPreview/InspectionPreview";
 import CircularProgressBar from "../../../globalComponents/CircularProgressBar/CircularProgressBar";
 import Modal from "../../../globalComponents/shared/Modal";
 import {
-  BuildingIcon,
   BuildingsIcon,
-  Calender,
-  DateofInspection,
+  DateofInspectionIcon,
   DetailsIcon,
-  InspectionOfficer,
-  InspectionType,
+  InspectionOfficerIcon,
+  InspectionTypeIcon,
   ResultIcon,
   SearchIcon,
-  Warning,
 } from "../../../assets/svgs";
 
 export const sensorData = [
@@ -63,7 +54,7 @@ const InspectionHistory = () => {
     {
       name: (
         <div className="flex flex-col gap-1 items-center">
-          <InspectionOfficer />
+          <InspectionOfficerIcon />
           <span>Inspection Officer</span>
         </div>
       ),
@@ -94,7 +85,7 @@ const InspectionHistory = () => {
     {
       name: (
         <div className="flex flex-col gap-1 items-center">
-          <DateofInspection />
+          <DateofInspectionIcon />
           <span>Date of Inspection</span>
         </div>
       ),
@@ -109,7 +100,7 @@ const InspectionHistory = () => {
     {
       name: (
         <div className="flex flex-col gap-1 items-center">
-          <InspectionType />
+          <InspectionTypeIcon />
           <span>Inspection Type</span>
         </div>
       ),

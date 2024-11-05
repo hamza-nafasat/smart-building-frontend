@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { BlueHome, CustomChevronDown } from "../../../../../assets/svgs";
+import {
+  BlueHomeIcon,
+  CustomChevronDownIcon,
+} from "../../../../../assets/svgs";
 import SensorsTable from "./SensorsTable";
 
 const Accordion = ({ floor, sensorData }) => {
@@ -18,7 +21,7 @@ const Accordion = ({ floor, sensorData }) => {
       >
         <div className="flex justify-between items-center py-2 px-4">
           <div className="flex gap-3 items-center">
-            <BlueHome />
+            <BlueHomeIcon />
             <p className="text-sm md:text-base font-[600]">Floor {floor}</p>
           </div>
 
@@ -28,7 +31,7 @@ const Accordion = ({ floor, sensorData }) => {
                 openAccordion ? "rotate-180" : "rotate-0"
               }`}
             >
-              <CustomChevronDown />
+              <CustomChevronDownIcon />
             </span>
           </div>
         </div>

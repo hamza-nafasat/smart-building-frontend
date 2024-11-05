@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronDownSimple, ChevronDownStylish } from "../../assets/svgs";
+import {
+  ChevronDownSimpleIcon,
+  ChevronDownStylishIcon,
+} from "../../assets/svgs";
 
 const Dropdown = ({
   options,
@@ -59,7 +62,7 @@ const Dropdown = ({
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         >
-          {simpleArrow ? <ChevronDownSimple /> : <ChevronDownStylish />}
+          {simpleArrow ? <ChevronDownSimpleIcon /> : <ChevronDownStylishIcon />}
         </div>
       </button>
       {isOpen && (

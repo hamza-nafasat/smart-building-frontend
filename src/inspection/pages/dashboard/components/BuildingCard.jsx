@@ -2,7 +2,7 @@ import React from "react";
 import { GoDotFill } from "react-icons/go";
 
 import { Link, useNavigate } from "react-router-dom";
-import { LocationIcon, PurpleCalender } from "../../../../assets/svgs";
+import { LocationIcon, PurpleCalenderIcon } from "../../../../assets/svgs";
 import Building from "../../../../assets/images/default/building-image.png";
 
 const BuildingCard = ({
@@ -63,7 +63,7 @@ const BuildingInfo = ({ name, address, sensors }) => {
           </div>
         </section>
         <section className="flex items-center gap-2">
-          <PurpleCalender />
+          <PurpleCalenderIcon />
           <div className="flex gap-3 text-[#007AFF]">
             <h3 className="text-xs">24/08/2024</h3>
           </div>

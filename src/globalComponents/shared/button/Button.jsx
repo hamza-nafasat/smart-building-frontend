@@ -15,7 +15,7 @@ const Button = ({
   const [isHovered, setIsHovered] = useState(false);
   return (
     <button
-      className={`rounded-md px-[21px] py-[10px] flex gap-1 items-center justify-center ${
+      className={`capitalize rounded-md px-[21px] py-[10px] flex gap-1 items-center justify-center ${
         width ? width : "w-fit"
       } ${
         bg

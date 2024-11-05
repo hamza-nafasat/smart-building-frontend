@@ -2,42 +2,59 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Calender } from "../../assets/svgs";
+import { CalenderIcon, CustomCalenderIcon } from "../../assets/svgs";
 
-const CustomInput = React.forwardRef(({ value, onClick }, ref) => (
-  <div
-    className="custom-input-wrapper shadow-sm w-full"
-    onClick={onClick}
-    ref={ref}
-    style={{
-      display: "flex",
-      alignItems: "center",
-      border: "1px solid #54545499",
-      borderRadius: "6px",
-      padding: "12px 20px",
-      color: "#54545499",
-      cursor: "pointer",
-      width: "100%",
-    }}
-  >
-    <Calender />
-    <input
-      type="text"
-      value={value || "Select a date"}
-      readOnly
-      style={{
-        marginLeft: "10px",
-        border: "none",
-        outline: "none",
-        fontSize: "16px",
-        width: "100%",
-        flexGrow: 1,
-      }}
-    />
-  </div>
-));
+// Destructure `label` inside the props parameter
+const CustomInput = React.forwardRef(
+  (
+    { value, onClick, label, calenderIcon = true, customCalenderIcon = false },
+    ref
+  ) => (
+    <div>
+      {label && (
+        <label className="block text-[#11111199] text-sm mb-2">{label}</label>
+      )}
+      <div
+        className="custom-input-wrapper shadow-sm w-full"
+        onClick={onClick}
+        ref={ref}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          border: "1px solid #54545499",
+          borderRadius: "6px",
+          padding: "11.5px 20px",
+          color: "#54545499",
+          cursor: "pointer",
+          width: "100%",
+        }}
+      >
+        {calenderIcon && <CalenderIcon />}
+        <input
+          type="text"
+          value={value || "Select a date"}
+          readOnly
+          style={{
+            marginLeft: "10px",
+            border: "none",
+            outline: "none",
+            fontSize: "16px",
+            width: "100%",
+            flexGrow: 1,
+          }}
+        />
+        {customCalenderIcon && <CustomCalenderIcon />}
+      </div>
+    </div>
+  )
+);
 
-const CustomDatePicker = ({ selectionType = "single" }) => {
+const CustomDatePicker = ({
+  selectionType = "single",
+  label,
+  calenderIcon = true,
+  customCalenderIcon = false,
+}) => {
   const defaultStartDate = new Date("2024-02-11");
   const defaultEndDate = new Date("2025-02-11");
 
@@ -65,7 +82,13 @@ const CustomDatePicker = ({ selectionType = "single" }) => {
         endDate={endDate}
         onChange={handleChange}
         selectsRange={selectionType === "range"}
-        customInput={<CustomInput />}
+        customInput={
+          <CustomInput
+            label={label}
+            calenderIcon={calenderIcon}
+            customCalenderIcon={customCalenderIcon}
+          />
+        }
         dateFormat="MM/dd/yy"
         placeholderText={
           selectionType === "range" ? "Select a date range" : "Select a date"

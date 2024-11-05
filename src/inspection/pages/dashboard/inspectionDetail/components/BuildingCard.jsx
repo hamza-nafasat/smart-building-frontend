@@ -4,7 +4,7 @@ import { GoDotFill } from "react-icons/go";
 import { Link, useNavigate } from "react-router-dom";
 import {
   LocationIcon,
-  PurpleCalender,
+  PurpleCalenderIcon,
   TotalAreaIcon,
   TotalFloorsIcon,
 } from "../../../../../assets/svgs";
@@ -66,7 +66,7 @@ const BuildingInfo = ({ name, address, sensors }) => {
           </div>
         </section>
         <section className="flex items-center gap-2">
-          <PurpleCalender />
+          <PurpleCalenderIcon />
           <div className="flex gap-3 text-[#007AFF]">
             <h3 className="text-xs">24/08/2024</h3>
           </div>

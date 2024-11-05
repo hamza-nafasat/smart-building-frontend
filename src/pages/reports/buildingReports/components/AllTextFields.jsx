@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import Button from "../../../../../globalComponents/shared/button/Button";
-import Input from "../../../../../globalComponents/shared/Input";
-import Dropdown from "../../../../../globalComponents/shared/Dropdown";
-import Modal from "../../../../../globalComponents/shared/Modal";
-import { Csv, Sample } from "../../../../../assets/svgs";
-import { Pdf } from "../../../../../assets/svgs";
-import { Excel } from "../../../../../assets/svgs";
-import CustomDatePicker from "../../../../../globalComponents/shared/DatePicker";
+import Button from "../../../../globalComponents/shared/button/Button";
+import Input from "../../../../globalComponents/shared/Input";
+import Dropdown from "../../../../globalComponents/shared/Dropdown";
+import Modal from "../../../../globalComponents/shared/Modal";
+import {
+  CsvIcon,
+  SampleIcon,
+  PdfIcon,
+  ExcelIcon,
+} from "../../../../assets/svgs";
+
+import CustomDatePicker from "../../../../globalComponents/shared/DatePicker";
 
 const AllTextFields = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -38,22 +42,28 @@ const AllTextFields = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 mt-4 gap-4">
-        <div className="">
-          <Input type="date" label="Range From" />
-        </div>
-        <div className="">
-          <Input type="date" label="Range To" />
-        </div>
+        {/* <Input type="date" label="Range From" /> */}
+        <CustomDatePicker
+          customCalenderIcon={true}
+          calenderIcon={false}
+          label="Range From"
+        />
+        {/* <Input type="date" label="Range To" /> */}
+        <CustomDatePicker
+          customCalenderIcon={true}
+          calenderIcon={false}
+          label="Range To"
+        />
       </div>
       <div className="mt-4">
         <label className="block text-[#11111199] text-sm mb-2">
           Select Sample
         </label>
         <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-          <img src={Sample} className="cursor-pointer" />
-          <img src={Sample} className="cursor-pointer" />
-          <img src={Sample} className="cursor-pointer" />
-          <img src={Sample} className="cursor-pointer" />
+          <img src={SampleIcon} className="cursor-pointer" />
+          <img src={SampleIcon} className="cursor-pointer" />
+          <img src={SampleIcon} className="cursor-pointer" />
+          <img src={SampleIcon} className="cursor-pointer" />
         </div>
       </div>
       <div className="grid grid-cols-1 mt-4">
@@ -86,7 +96,12 @@ const AllTextFields = () => {
 
       <div className="grid grid-cols-1 xl:grid-cols-2 mt-4 gap-4">
         <div className="">
-          <Input type="date" label="Date" />
+          {/* <Input type="date" label="Date" /> */}
+          <CustomDatePicker
+            customCalenderIcon={true}
+            calenderIcon={false}
+            label="Date"
+          />
         </div>
         <div className="">
           <Input type="time" label="Time" />
@@ -134,15 +149,15 @@ const ModalBody = () => {
 
       <div className="mt-2 flex flex-wrap gap-2">
         <div className="flex gap-2 items-start px-4 py-2 border-[2px] rounded-md w-fit cursor-pointer">
-          <img src={Csv} className="h-5" />
+          <img src={CsvIcon} className="h-5" />
           <p className="text-sm">CSV file</p>
         </div>
         <div className="flex gap-2 items-start px-4 py-2 border-[2px] rounded-md w-fit cursor-pointer">
-          <img src={Pdf} className="h-5" />
+          <img src={PdfIcon} className="h-5" />
           <p className="text-sm">PDF file</p>
         </div>
         <div className="flex gap-2 items-start px-4 py-2 border-[2px] rounded-md w-fit cursor-pointer">
-          <img src={Excel} className="h-5" />
+          <img src={ExcelIcon} className="h-5" />
           <p className="text-sm">Excel file</p>
         </div>
       </div>

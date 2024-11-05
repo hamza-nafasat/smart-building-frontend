@@ -2,15 +2,9 @@ import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 import CircularProgressBar from "../../../../../globalComponents/CircularProgressBar/CircularProgressBar";
 import {
-  BuildingIcon,
-  BuildingsIcon,
-  Calender,
-  DateofInspection,
   ElectricityIcon,
   FeedbackIcon,
   GasIcon,
-  InspectionOfficer,
-  InspectionType,
   IssuesIcon,
   LeakageIcon,
   RatingIcon,

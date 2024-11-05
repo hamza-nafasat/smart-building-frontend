@@ -8,52 +8,53 @@ import Alerts from "./components/Alerts";
 import SensorTable from "./components/SensorTable";
 import InspectionTable from "./components/InspectionTable";
 import {
-  Fire,
-  FireDetector,
-  Preview,
+  FireIcon,
+  FireDetectorIcon,
+  PreviewIcon,
   ReportPageIcon,
-  Thermometer,
-  Thunder,
+  ThermometerIcon,
+  ThunderIcon,
+  DropIcon,
 } from "../../../assets/svgs";
-import Drop from "../../../assets/svgs/report/Drop";
+
 import StatusGraph from "./components/StatusGraph";
 import Input from "../../../globalComponents/shared/Input";
 import Button from "../../../globalComponents/shared/button/Button";
 import { FiChevronDown } from "react-icons/fi";
-import AllTextFields from "./components/generateReport/AllTextFields";
+import AllTextFields from "./components/AllTextFields";
 
 const statusCardIcon = [
-  { heading: "Electricity", icon: <Thunder /> },
-  { heading: "Gas", icon: <Fire /> },
-  { heading: "Temperature", icon: <Thermometer /> },
-  { heading: "Water", icon: <Drop /> },
-  { heading: "Fire Detectors", icon: <FireDetector /> },
+  { heading: "Electricity", icon: <ThunderIcon /> },
+  { heading: "Gas", icon: <FireIcon /> },
+  { heading: "Temperature", icon: <ThermometerIcon /> },
+  { heading: "Water", icon: <DropIcon /> },
+  { heading: "Fire Detectors", icon: <FireDetectorIcon /> },
 ];
 const usageCardIcon = [
   {
     heading: "Electricity",
-    icon: <Thunder />,
+    icon: <ThunderIcon />,
     percentage: 34,
     color: "#007AFF",
     stroke: "#a0d4fa",
   },
   {
     heading: "Gas",
-    icon: <Fire />,
+    icon: <FireIcon />,
     percentage: 56,
     color: "#FF8932",
     stroke: "#fac7a0",
   },
   {
     heading: "Water",
-    icon: <Drop />,
+    icon: <DropIcon />,
     percentage: 70,
     color: "#49DA8F",
     stroke: "#b3ffd7",
   },
   {
     heading: "Temperature",
-    icon: <Thermometer />,
+    icon: <ThermometerIcon />,
     percentage: 90,
     color: "#F02D2D",
     stroke: "#ffbaba ",
@@ -206,7 +207,7 @@ const GeneratedReport = () => {
               <h3 className="text-lg sm:text-xl font-[600] text-center text-[#414141] mb-4">
                 Report Preview
               </h3>
-              <img src={Preview} />
+              <img src={PreviewIcon} />
             </div>
           </div>
         </div>
