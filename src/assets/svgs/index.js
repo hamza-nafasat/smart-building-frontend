@@ -59,8 +59,12 @@ import TotalAreaIcon from "./inspection/TotalAreaIcon";
 import TotalSensorIcon from "./inspection/TotalSensorIcon";
 import InspectionIcon from "./aside/InspectionIcon";
 import CustomCalenderIcon from "./default/CustomCalenderIcon";
+import BlueBgPhoneIcon from "./default/BlueBgPhoneIcon";
+import BlueBgLocationIcon from "./default/BlueBgLocationIcon";
 
 export {
+  BlueBgLocationIcon,
+  BlueBgPhoneIcon,
   CustomCalenderIcon,
   TotalSensorIcon,
   TotalAreaIcon,
