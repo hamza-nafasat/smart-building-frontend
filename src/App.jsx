@@ -18,6 +18,7 @@ import Login from "./pages/auth/login/Login";
 import SignUp from "./pages/auth/signup/Signup";
 import ForgetPassword from "./pages/auth/forgetPassword/ForgetPassword";
 import ChangePassword from "./pages/auth/forgetPassword/ChangePassword";
+import UserChangePassword from "./pages/settings/changePassword/UserChangePassword";
 const MainDashboard = lazy(() => import("./globalComponents/layout"));
 const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
 const Buildings = lazy(() => import("./pages/buildings/Buildings"));
@@ -59,6 +60,7 @@ function App() {
             <Route path="realtime-map" element={<RealtimeMap />} />
             <Route path="inspectionists" element={<Inspectionists />} />
             <Route path="account" element={<Account />} />
+            <Route path="changePassword" element={<UserChangePassword />} />
             <Route path="configuration" element={<Configuration />} />
             <Route path="building-reports" element={<Reports />} />
             <Route path="inspection-officer" element={<InspectionOfficer />} />

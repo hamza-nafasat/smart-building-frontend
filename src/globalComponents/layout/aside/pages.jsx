@@ -4,7 +4,7 @@ import {
   MapIcon,
   ReportIcon,
   SettingIcon,
-  InspectionIcon
+  InspectionIcon,
 } from "../../../assets/svgs";
 
 export const pages = [
@@ -74,8 +74,12 @@ export const pages = [
     icon: <SettingIcon />,
     subPages: [
       {
-        title: "Account",
+        title: "My Account",
         link: "/account",
+      },
+      {
+        title: "Change Password",
+        link: "/changePassword",
       },
       {
         title: "Configuration",

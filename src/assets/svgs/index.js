@@ -61,6 +61,9 @@ import InspectionIcon from "./aside/InspectionIcon";
 import CustomCalenderIcon from "./default/CustomCalenderIcon";
 import BlueBgPhoneIcon from "./default/BlueBgPhoneIcon";
 import BlueBgLocationIcon from "./default/BlueBgLocationIcon";
+import FloorIcon from "./buildings/FloorIcon";
+import AreaIcon from "./buildings/AreaIcon";
+import SensorIcon from "./buildings/SensorIcon";
 
 export {
   BlueBgLocationIcon,
@@ -126,4 +129,7 @@ export {
   CustomChevronDownIcon,
   BlueHomeIcon,
   InspectionIcon,
+  FloorIcon,
+  SensorIcon,
+  AreaIcon,
 };
