@@ -4,6 +4,7 @@ import MappingInfo from "./MappingInfo";
 import RoomsInfo from "./RoomsInfo";
 import { BuildingArrowIcon } from "../../../assets/svgs";
 import UploadPhotos from "./UploadPhotos";
+import SensorDetails from "./SensorDetails";
 
 const BuildingStepper = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -18,12 +19,20 @@ const BuildingStepper = () => {
         return <MappingInfo setCurrentStep={setCurrentStep} />;
       case 3:
         return <RoomsInfo setCurrentStep={setCurrentStep} />;
+      case 4:
+        return <SensorDetails setCurrentStep={setCurrentStep} />;
       default:
         return null;
     }
   };
 
-  const steps = ["General Info", "Upload Photos", "Mapping Info", "Rooms Info"];
+  const steps = [
+    "General Info",
+    "Upload Photos",
+    "Mapping Info",
+    "Rooms Info",
+    "Additional info",
+  ];
 
   return (
     <div className="px-0 md:px-2">

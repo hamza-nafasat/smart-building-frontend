@@ -41,12 +41,19 @@ const GeneralInfo = ({ setCurrentStep }) => {
         <div className="col-span-12">
           <TextArea placeholder="Description" rows={4} />
         </div>
+
         <div className="col-span-12 lg:col-span-4">
           <Input type="number" placeholder="Number of floors" />
         </div>
-        {/* <div className="col-span-12 lg:col-span-4">
+        <div className="col-span-12 lg:col-span-4">
           <Input type="number" placeholder="Total area (sq ft/m)" />
-        </div> */}
+        </div>
+        <div className="col-span-12 lg:col-span-4">
+          <Dropdown
+            options={[{ option: "public" }, { option: "private" }]}
+            defaultText="Building type"
+          />
+        </div>
         <div className="col-span-12 lg:col-span-4">
           <Input type="number" placeholder="Year of construction" />
         </div>
@@ -58,13 +65,7 @@ const GeneralInfo = ({ setCurrentStep }) => {
             value={floorCount}
           />
         </div>
-        <div className="col-span-12 lg:col-span-6">
-          <Dropdown
-            options={[{ option: "public" }, { option: "private" }]}
-            defaultText="Building type"
-          />
-        </div>
-        <div className="col-span-12 lg:col-span-6">
+        <div className="col-span-12 lg:col-span-4">
           <Input type="text" placeholder="Other details" />
         </div>
         <div className="col-span-12 flex justify-end">

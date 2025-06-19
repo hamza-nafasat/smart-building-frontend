@@ -5,7 +5,7 @@ import Input from "../../../globalComponents/shared/Input";
 import TextArea from "../../../globalComponents/shared/TextArea";
 import { FaChevronDown } from "react-icons/fa";
 
-let floorCount = new Array(2).fill();
+let floorCount = new Array(4).fill();
 
 console.log(floorCount);
 const RoomsInfo = ({ setCurrentStep }) => {
@@ -25,10 +25,10 @@ const RoomsInfo = ({ setCurrentStep }) => {
         <Button
           onClick={() => setCurrentStep((prevStep) => prevStep - 1)}
           text="Back"
-          width="w-[153px]"
+          // width="w-[153px]"
           bg="bg-transparent text-primary border-primary border-[1px] hover:bg-primary hover:text-white"
         />
-        <Button onClick={buttonClickHandler} text="Submit" width="w-[153px]" />
+        <Button onClick={buttonClickHandler} text="Next"  />
       </div>
     </div>
   );

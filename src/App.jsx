@@ -53,8 +53,8 @@ function App() {
 
           <Route path="/" element={<MainDashboard />}>
             <Route index element={<Dashboard />} />
-            <Route path="buildings" element={<Buildings />} />
-            <Route path="add-building" element={<BuildingStepper />} />
+            <Route path="buildings" element={<BuildingStepper />} />
+            {/* <Route path="add-building" element={<BuildingStepper />} /> */}
             <Route path="reports" element={<Reports />} />
             <Route path="realtime-heatmap" element={<RealtimeHeatmap />} />
             <Route path="realtime-map" element={<RealtimeMap />} />

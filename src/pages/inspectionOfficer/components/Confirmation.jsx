@@ -6,7 +6,7 @@ import {
   TotalFloorsIcon,
   TotalSensorIcon,
 } from "../../../assets/svgs";
-import { PiMapPinLineLight } from "react-icons/pi";
+// import { PiMapPinLineLight } from "react-icons/pi";
 import BuildingCardList from "./BuildingCardList";
 
 const Confirmation = ({ setCurrentStep }) => {
